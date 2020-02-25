@@ -1,9 +1,11 @@
 
-<h2 class="m-4">New Cocktail</h2>
+<h2 class="m-4" style="text-align: center">New Cocktail</h2>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.button :submit, class: "btn-primary" %>
-  <%= f.button :button, "Cancel", type: "reset", class: "btn-outline-secondary" %>
-<% end %>
+<div class="container justify-content-center">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.button :submit, class: "btn-primary" %>
+    <%= link_to "Cancel".html_safe, root_path, class: "btn btn-outline-secondary" %>
+  <% end %>
+</div>

@@ -8,14 +8,13 @@
   <div class="row justify-content-center">
     <div class="col-xs-12 col-sm-6 col-sm-offset-3">
 
-      <ul>
+      <p style="text-align: center">
         <% @cocktail.doses.each do |dose| %>
-          <li>
-            <%= dose.description %> of <%= dose.ingredient.name %>
-            (<%= link_to ("<i class='fas fa-trash'></i>").html_safe, dose_path(dose), method: :delete %>)
-          </li>
+          <%= dose.description %> of <%= dose.ingredient.name %>
+          (<%= link_to ("<i class='fas fa-trash'></i>").html_safe, dose_path(dose), method: :delete %>)
+      <br>
         <% end %>
-      </ul>
+      </p>
 
 
 

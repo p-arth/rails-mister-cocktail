@@ -1,2 +1,14 @@
 // Import page-specific CSS files here.
 @import "home";
+
+// .container {
+  // text-align: center;
+  // display: flex;
+// }
+
+.card-img-top {
+  height: 120px;
+  width: 100%;
+  object-fit: cover;
+}
+

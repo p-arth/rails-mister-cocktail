@@ -1,2 +1,40 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<h2 class="m-4" style="text-align: center"><%= @cocktail.name %></h2>
+
+<div class="container m-4 d-flex justify-content-center">
+  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <li>
+            <%= dose.description %> of <%= dose.ingredient.name %>
+            (<%= link_to "delete", dose_path(dose), method: :delete %>)
+          </li>
+        <% end %>
+      </ul>
+
+
+
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+
+        <% if @dose.errors.any? %>
+          <ul>
+          <% @dose.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        <% end %>
+
+        <%= f.input :description, placeholder: "2 teaspoons" %>
+        <%= f.input :ingredient_id, collection: Ingredient.all, prompt: "Choose one" %>
+
+        <%= f.submit "Add dose", class: "btn btn-primary"%>
+        <%= link_to "Back to List".html_safe, root_path, class: "btn btn-outline-secondary" %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -3,10 +3,11 @@
   background: white;
   background-color: transparent;
   transition: 0.5s background-color ease;
+  // color: white;
 }
 
 .navbar-cocktail-white {
-  background-color: white;
+  background-color: black;
 }
 
 .navbar-cocktail .navbar-collapse {
@@ -15,4 +16,8 @@
 
 .navbar-cocktail .navbar-brand img {
   width: 40px;
+}
+
+.nav-link {
+  color: white !important;
 }

@@ -1,2 +1,25 @@
-<h2>Cocktails List</h2>
-<p>Whatever</p>
+
+<div style="text-align: center">
+  <h2 class="m-4">Cocktails List</h2>
+</div>
+  <div class="container d-flex text-center flex-wrap justify-content-center">
+    <div class="card m-2" style="width: 18rem;">
+      <img class="card-img-top" src="https://ewscripps.brightspotcdn.com/dims4/default/17487b3/2147483647/strip/true/crop/1280x720+0+0/resize/1280x720!/quality/90/?url=https%3A%2F%2Fewscripps.brightspotcdn.com%2Ff9%2F8b%2F2f6454df4e098cb85753dea78d0a%2Fgeneric-cocktail.jpeg" alt="">
+      <div class="card-body">
+        <h5 class="card-title"></h5>
+        <p class="card-text"></p>
+        <%= link_to "Add new drink", new_cocktail_path, class: "btn btn-primary" %>
+      </div>
+    </div>
+
+    <% @cocktails.each do |cocktail| %>
+        <div class="card m-2" style="width: 18rem;">
+          <%= cl_image_tag cocktail.photo.key, crop: :fill, :class => "card-img-top" %>
+          <div class="card-body">
+            <h5 class="card-title"><%= cocktail.name %></h5>
+            <p class="card-text"></p>
+            <%= link_to "Details", cocktail_path(cocktail), class: "btn btn-primary" %>
+          </div>
+        </div>
+    <% end %>
+  </div>

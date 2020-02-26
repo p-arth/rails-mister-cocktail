@@ -11,3 +11,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+h1 {
+  font-weight: bolder;
+}
+
+#btn {
+  background-color: $black;
+  border-color: $black;
+}

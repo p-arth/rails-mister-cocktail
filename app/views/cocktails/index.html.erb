@@ -8,7 +8,7 @@
       <div class="card-body">
         <h5 class="card-title"></h5>
         <p class="card-text"></p>
-        <%= link_to "Add new drink", new_cocktail_path, class: "btn btn-primary" %>
+        <%= link_to "New Cocktail", new_cocktail_path, class: "btn btn-primary", id: "btn" %>
       </div>
     </div>
 
@@ -18,7 +18,7 @@
           <div class="card-body">
             <h5 class="card-title"><%= cocktail.name %></h5>
             <p class="card-text"></p>
-            <%= link_to "Details", cocktail_path(cocktail), class: "btn btn-primary" %>
+            <%= link_to "Details", cocktail_path(cocktail), class: "btn btn-primary", id: "btn" %>
           </div>
         </div>
     <% end %>

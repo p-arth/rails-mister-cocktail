@@ -31,7 +31,7 @@
         <%= f.input :description, placeholder: "2 teaspoons" %>
         <%= f.input :ingredient_id, collection: Ingredient.all, prompt: "Choose one" %>
 
-        <%= f.submit "Add dose", class: "btn btn-primary"%>
+        <%= f.submit "Add dose", class: "btn btn-primary", id: "btn" %>
         <%= link_to "Back to List".html_safe, root_path, class: "btn btn-outline-secondary" %>
       <% end %>
     </div>

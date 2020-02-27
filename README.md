@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+You can check the current version of my WEBAPP here: http://rails-cocktail-palooza.herokuapp.com

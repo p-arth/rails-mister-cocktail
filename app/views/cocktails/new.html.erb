@@ -1,10 +1,10 @@
 
 <h2 class="m-4" style="text-align: center">New Cocktail</h2>
 
-<div class="container justify-content-center">
+<div class="container justify-content-center" style="margin-bottom: 100px;">
   <%= simple_form_for @cocktail do |f| %>
     <%= f.input :name %>
-    <%= f.input :photo, as: :file %>
+    <%= f.input :photo, as: :file, required: true %>
     <%= f.button :submit, class: "btn-primary", id: "btn" %>
     <%= link_to "Cancel".html_safe, root_path, class: "btn btn-outline-secondary" %>
   <% end %>
